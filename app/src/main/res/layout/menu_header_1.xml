@@ -36,10 +36,11 @@
     </LinearLayout>
 
     <TextView
-        android:id="@+id/nav_main"
+        android:id="@+id/nav_standard"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Standard"
+        android:onClick="openCalc"
         android:theme="@style/Base.Theme.nav_Items" />
 
     <TextView
@@ -47,6 +48,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Scientific"
+        android:onClick="openCalc"
         android:theme="@style/Base.Theme.nav_Items" />
 
     <TextView
@@ -54,6 +56,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Programmer"
+        android:onClick="openCalc"
         android:theme="@style/Base.Theme.nav_Items" />
 
     <TextView
@@ -68,6 +71,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Volume"
+        android:onClick="openCalc"
         android:theme="@style/Base.Theme.nav_Items" />
 
     <TextView
@@ -75,6 +79,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Length"
+        android:onClick="openCalc"
         android:theme="@style/Base.Theme.nav_Items" />
 
     <TextView
@@ -82,6 +87,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Weight and Mass"
+        android:onClick="openCalc"
         android:theme="@style/Base.Theme.nav_Items" />
 
     <TextView
@@ -89,6 +95,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Temperature"
+        android:onClick="openCalc"
         android:theme="@style/Base.Theme.nav_Items" />
 
     <TextView
@@ -96,6 +103,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Energy"
+        android:onClick="openCalc"
         android:theme="@style/Base.Theme.nav_Items" />
 
     <TextView
@@ -103,6 +111,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Area"
+        android:onClick="openCalc"
         android:theme="@style/Base.Theme.nav_Items" />
 
     <TextView
@@ -110,6 +119,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Speed"
+        android:onClick="openCalc"
         android:theme="@style/Base.Theme.nav_Items" />
 
     <TextView
@@ -117,6 +127,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Time"
+        android:onClick="openCalc"
         android:theme="@style/Base.Theme.nav_Items" />
 
     <TextView
@@ -124,6 +135,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Power"
+        android:onClick="openCalc"
         android:theme="@style/Base.Theme.nav_Items" />
 
     <TextView
@@ -131,6 +143,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Data"
+        android:onClick="openCalc"
         android:theme="@style/Base.Theme.nav_Items" />
 
     <TextView
@@ -138,6 +151,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Pressure"
+        android:onClick="openCalc"
         android:theme="@style/Base.Theme.nav_Items" />
 
     <TextView
@@ -145,5 +159,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Angle"
+        android:onClick="openCalc"
         android:theme="@style/Base.Theme.nav_Items" />
 </LinearLayout>

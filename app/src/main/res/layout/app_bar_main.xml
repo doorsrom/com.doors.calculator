@@ -27,6 +27,7 @@
                 app:srcCompat="@drawable/ic_menu_white_24dp" />
 
             <TextView
+                android:id="@+id/calcMainText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingLeft="14dp"
@@ -34,6 +35,7 @@
                 android:text="STANDARD"
                 android:textStyle="bold"
                 android:theme="@style/Base.Theme.nav_Items" />
+
         </LinearLayout>
 
     </android.support.design.widget.AppBarLayout>
