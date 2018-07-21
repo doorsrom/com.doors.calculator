@@ -22,6 +22,7 @@
             android:layout_height="wrap_content"
             android:paddingLeft="12dp"
             android:paddingTop="6dp"
+            android:onClick="closeNavBar"
             app:srcCompat="@drawable/ic_menu_white_24dp" />
 
         <TextView
