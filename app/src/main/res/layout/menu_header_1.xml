@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/nav_header_height"
+        android:background="#000000" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="4dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="12dp"
+            android:paddingTop="6dp"
+            app:srcCompat="@drawable/ic_menu_white_24dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="14dp"
+            android:paddingTop="9dp"
+            android:text="CALCULATOR"
+            android:textStyle="bold"
+            android:theme="@style/Base.Theme.nav_Items" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/nav_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Standard"
+        android:theme="@style/Base.Theme.nav_Items" />
+
+    <TextView
+        android:id="@+id/nav_scientific"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Scientific"
+        android:theme="@style/Base.Theme.nav_Items" />
+
+    <TextView
+        android:id="@+id/nav_programmer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Programmer"
+        android:theme="@style/Base.Theme.nav_Items" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CONVERTER"
+        android:textStyle="bold"
+        android:theme="@style/Base.Theme.nav_Items" />
+
+    <TextView
+        android:id="@+id/nav_volume"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Volume"
+        android:theme="@style/Base.Theme.nav_Items" />
+
+    <TextView
+        android:id="@+id/nav_length"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Length"
+        android:theme="@style/Base.Theme.nav_Items" />
+
+    <TextView
+        android:id="@+id/nav_weight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Weight and Mass"
+        android:theme="@style/Base.Theme.nav_Items" />
+
+    <TextView
+        android:id="@+id/nav_temperature"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Temperature"
+        android:theme="@style/Base.Theme.nav_Items" />
+
+    <TextView
+        android:id="@+id/nav_energy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Energy"
+        android:theme="@style/Base.Theme.nav_Items" />
+
+    <TextView
+        android:id="@+id/nav_area"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Area"
+        android:theme="@style/Base.Theme.nav_Items" />
+
+    <TextView
+        android:id="@+id/nav_speed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Speed"
+        android:theme="@style/Base.Theme.nav_Items" />
+
+    <TextView
+        android:id="@+id/nav_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Time"
+        android:theme="@style/Base.Theme.nav_Items" />
+
+    <TextView
+        android:id="@+id/nav_power"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Power"
+        android:theme="@style/Base.Theme.nav_Items" />
+
+    <TextView
+        android:id="@+id/nav_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Data"
+        android:theme="@style/Base.Theme.nav_Items" />
+
+    <TextView
+        android:id="@+id/nav_pressure"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Pressure"
+        android:theme="@style/Base.Theme.nav_Items" />
+
+    <TextView
+        android:id="@+id/nav_angle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Angle"
+        android:theme="@style/Base.Theme.nav_Items" />
+</LinearLayout>
