@@ -12,119 +12,119 @@
     <include
         android:id="@+id/wrap_standard"
         layout="@layout/site_standard"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_weight="1" />
 
     <include
         android:id="@+id/wrap_scientific"
         layout="@layout/site_scientific"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_weight="1"
         android:visibility="gone" />
 
     <include
         android:id="@+id/wrap_programmer"
         layout="@layout/site_programmer"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_weight="1"
         android:visibility="gone" />
 
     <include
         android:id="@+id/wrap_volume"
         layout="@layout/site_volume"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_weight="1"
         android:visibility="gone" />
 
     <include
         android:id="@+id/wrap_length"
         layout="@layout/site_length"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_weight="1"
         android:visibility="gone" />
 
     <include
         android:id="@+id/wrap_weight"
         layout="@layout/site_weight"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_weight="1"
         android:visibility="gone" />
 
     <include
         android:id="@+id/wrap_temperature"
         layout="@layout/site_temperature"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_weight="1"
         android:visibility="gone" />
 
     <include
         android:id="@+id/wrap_energy"
         layout="@layout/site_energy"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_weight="1"
         android:visibility="gone" />
 
     <include
         android:id="@+id/wrap_area"
         layout="@layout/site_area"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_weight="1"
         android:visibility="gone" />
 
     <include
         android:id="@+id/wrap_speed"
         layout="@layout/site_speed"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_weight="1"
         android:visibility="gone" />
 
     <include
         android:id="@+id/wrap_time"
         layout="@layout/site_time"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_weight="1"
         android:visibility="gone" />
 
     <include
         android:id="@+id/wrap_power"
         layout="@layout/site_power"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_weight="1"
         android:visibility="gone" />
 
     <include
         android:id="@+id/wrap_data"
         layout="@layout/site_data"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_weight="1"
         android:visibility="gone" />
 
     <include
         android:id="@+id/wrap_pressure"
         layout="@layout/site_pressure"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_weight="1"
         android:visibility="gone" />
 
     <include
         android:id="@+id/wrap_angle"
         layout="@layout/site_angle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_weight="1"
         android:visibility="gone" />
 </android.support.constraint.ConstraintLayout>
