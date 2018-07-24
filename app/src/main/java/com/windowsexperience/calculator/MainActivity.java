@@ -156,4 +156,59 @@ public class MainActivity extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(Gravity.START);
     }
+
+    public void newInput(final View v) {
+        standard standardClass = new standard();
+        TextView calcMainText = (TextView) findViewById(R.id.calcMainText);
+        String currentCategory = (String) calcMainText.getText();
+        switch (currentCategory) {
+            case "STANDARD":
+                TextView writing = (TextView) findViewById(R.id.standard_text_writing);
+                TextView written = (TextView) findViewById(R.id.standard_text_written);
+                standardClass.input(v, writing, written);
+                break;
+            case "SCIENTIFIC":
+                //standard.input(v);
+                break;
+            case "PROGRAMMER":
+                //standard.input(v);
+                break;
+            case "VOLUME":
+                //standard.input(v);
+                break;
+            case "LENGTH":
+                //standard.input(v);
+                break;
+            case "WEIGHT AND MASS":
+                //standard.input(v);
+                break;
+            case "TEMPERATURE":
+                //standard.input(v);
+                break;
+            case "ENERGY":
+                //standard.input(v);
+                break;
+            case "AREA":
+                //standard.input(v);
+                break;
+            case "SPEED":
+                //standard.input(v);
+                break;
+            case "TIME":
+                //standard.input(v);
+                break;
+            case "POWER":
+                //standard.input(v);
+                break;
+            case "DATA":
+                //standard.input(v);
+                break;
+            case "PRESSURE":
+                //standard.input(v);
+                break;
+            case "ANGLE":
+                //standard.input(v);
+                break;
+        }
+    }
 }
