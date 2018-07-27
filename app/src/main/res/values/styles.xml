@@ -1,21 +1,20 @@
 <resources>
 
-    <!-- Base application theme. -->
+    <style name="SplashTheme" parent="AppTheme">
+        <item name="android:windowBackground">@color/splashBackground</item>
+    </style>
+
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
         <item name="android:textColor">#fff</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
     </style>
 
     <style name="AppTheme.standard_Buttons" parent="AppTheme">
         <item name="android:textSize">30dp</item>
-    </style>
-
-    <style name="AppTheme.NoActionBar">
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
     </style>
 
     <style name="Base.Theme.nav_Items" parent="Theme.AppCompat.Light">
@@ -25,7 +24,7 @@
         <item name="android:paddingLeft">50dp</item>
     </style>
 
-    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"></style>
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
 
     <style name="Toolbar" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
         <item name="android:textSize">14dp</item>

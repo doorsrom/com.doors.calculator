@@ -158,14 +158,14 @@ public class MainActivity extends AppCompatActivity
     }
 
     public void newInput(final View v) {
-        standard standardClass = new standard();
+        //standard standardClass = new standard();
         TextView calcMainText = (TextView) findViewById(R.id.calcMainText);
         String currentCategory = (String) calcMainText.getText();
         switch (currentCategory) {
             case "STANDARD":
-                TextView writing = (TextView) findViewById(R.id.standard_text_writing);
-                TextView written = (TextView) findViewById(R.id.standard_text_written);
-                standardClass.input(v, writing, written);
+                //TextView writing = (TextView) findViewById(R.id.standard_text_writing);
+                //TextView written = (TextView) findViewById(R.id.standard_text_written);
+                //standardClass.input(v, writing, written);
                 break;
             case "SCIENTIFIC":
                 //standard.input(v);
