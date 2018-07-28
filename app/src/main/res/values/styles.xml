@@ -8,6 +8,7 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="spinnerStyle">@style/DoorsTheme.Spinner</item>
         <item name="android:textColor">#fff</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
@@ -34,4 +35,11 @@
     <style name="Base.Theme.ItemBold" parent="Theme.AppCompat.Light">
         <item name="android:titleTextStyle">@string/bold_textStyle</item>
     </style>
+
+    <style name="DoorsTheme.Spinner" parent="Widget.AppCompat.Spinner">
+        <item name="android:background">@null</item>
+        <item name="android:popupBackground">@drawable/spinner_dropdown</item>
+        <item name="android:popupElevation">0.1dp</item>
+    </style>
+
 </resources>
