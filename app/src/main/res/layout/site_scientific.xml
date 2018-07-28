@@ -1,12 +1,702 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical"
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
+    android:background="#000"
+
+    android:weightSum="100">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:gravity="center"
+            android:text="1234 x 3 - 2468"
+            android:textSize="24dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="17"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:gravity="center"
+            android:text="1.234"
+            android:textSize="80dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Site-Scientific"
-        android:textColor="#fff" />
-</android.support.constraint.ConstraintLayout>
+        android:orientation="horizontal"
+        android:layout_weight="4" >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="DEG" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="HYP" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="F-E" />
+        </LinearLayout>
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"/>
+
+    </LinearLayout>
+
+    <include
+        layout="@layout/calc_memory"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4" />
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="70"
+        android:columnCount="5"
+        android:rowCount="5">
+
+        <LinearLayout
+            android:id="@+id/scientific_btn_sq"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:orientation="vertical"
+            android:theme="@style/AppTheme.standard_Buttons">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="x²" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/scientific_btn_xtoy"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:orientation="vertical"
+            android:theme="@style/AppTheme.standard_Buttons">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="xʸ" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/scientific_btn_sin"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:orientation="vertical"
+            android:theme="@style/AppTheme.standard_Buttons">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="sin" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/scientific_btn_cos"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:orientation="vertical"
+            android:theme="@style/AppTheme.standard_Buttons">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="cos" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/scientific_btn_tan"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:orientation="vertical"
+            android:theme="@style/AppTheme.standard_Buttons">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="tan" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/scientific_btn_sqrt"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:orientation="vertical"
+            android:theme="@style/AppTheme.standard_Buttons">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="√" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/scientific_btn_10tox"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:orientation="vertical"
+            android:theme="@style/AppTheme.standard_Buttons">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="10ˣ" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/scientific_btn_log"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:orientation="vertical"
+            android:theme="@style/AppTheme.standard_Buttons">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="log" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/scientific_btn_Exp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:orientation="vertical"
+            android:theme="@style/AppTheme.standard_Buttons">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="Exp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/scientific_btn_Mod"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:orientation="vertical"
+            android:theme="@style/AppTheme.standard_Buttons">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="Mod" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/scientific_btn_caps"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:background="#45494A"
+            android:orientation="vertical"
+            android:theme="@style/AppTheme.standard_Buttons">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="↑" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/scientific_btn_CE"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:background="#45494A"
+            android:orientation="vertical"
+            android:theme="@style/AppTheme.standard_Buttons">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="CE" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/scientific_btn_C"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:background="#45494A"
+            android:orientation="vertical"
+            android:theme="@style/AppTheme.standard_Buttons">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="C" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/scientific_btn_del"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:background="#45494A"
+            android:orientation="vertical"
+            android:theme="@style/AppTheme.standard_Buttons">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="DEL" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/scientific_btn_divide"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:background="#45494A"
+            android:orientation="vertical"
+            android:theme="@style/AppTheme.standard_Buttons">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="÷" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/scientific_btn_pi"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:background="#45494A"
+            android:orientation="vertical"
+            android:theme="@style/AppTheme.standard_Buttons">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="π" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/scientific_btn_7"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:background="#45494A"
+            android:orientation="vertical"
+            android:theme="@style/AppTheme.standard_Buttons">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="7"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/scientific_btn_8"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:background="#45494A"
+            android:orientation="vertical"
+            android:theme="@style/AppTheme.standard_Buttons">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="8"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/scientific_btn_9"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:background="#45494A"
+            android:orientation="vertical"
+            android:theme="@style/AppTheme.standard_Buttons">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="9"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/scientific_btn_times"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:background="#45494A"
+            android:orientation="vertical"
+            android:theme="@style/AppTheme.standard_Buttons">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="×" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/scientific_btn_n"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:background="#45494A"
+            android:orientation="vertical"
+            android:theme="@style/AppTheme.standard_Buttons">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="n!" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/scientific_btn_4"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:background="#45494A"
+            android:orientation="vertical"
+            android:theme="@style/AppTheme.standard_Buttons">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="4"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/scientific_btn_5"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:background="#45494A"
+            android:orientation="vertical"
+            android:theme="@style/AppTheme.standard_Buttons">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="5"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/scientific_btn_6"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:background="#45494A"
+            android:orientation="vertical"
+            android:theme="@style/AppTheme.standard_Buttons">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="6"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/scientific_btn_subtract"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:background="#45494A"
+            android:orientation="vertical"
+            android:theme="@style/AppTheme.standard_Buttons">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="-" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/scientific_btn_minusplus"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:background="#45494A"
+            android:orientation="vertical"
+            android:theme="@style/AppTheme.standard_Buttons">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="±" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/scientific_btn_1"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:background="#45494A"
+            android:orientation="vertical"
+            android:theme="@style/AppTheme.standard_Buttons">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="1"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/scientific_btn_2"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:background="#45494A"
+            android:orientation="vertical"
+            android:theme="@style/AppTheme.standard_Buttons">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="2"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/scientific_btn_3"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:background="#45494A"
+            android:orientation="vertical"
+            android:theme="@style/AppTheme.standard_Buttons">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="3"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/scientific_btn_add"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:background="#45494A"
+            android:orientation="vertical"
+            android:theme="@style/AppTheme.standard_Buttons">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="+" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/scientific_btn_openbracket"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:background="#45494A"
+            android:orientation="vertical"
+            android:theme="@style/AppTheme.standard_Buttons">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="(" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/scientific_btn_closebracket"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:background="#45494A"
+            android:orientation="vertical"
+            android:theme="@style/AppTheme.standard_Buttons">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text=")" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/scientific_btn_0"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:background="#45494A"
+            android:orientation="vertical"
+            android:theme="@style/AppTheme.standard_Buttons">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="0"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/scientific_btn_point"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:background="#45494A"
+            android:orientation="vertical"
+            android:theme="@style/AppTheme.standard_Buttons">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="." />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/scientific_btn_calc"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:background="#45494A"
+            android:orientation="vertical"
+            android:theme="@style/AppTheme.standard_Buttons">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="=" />
+        </LinearLayout>
+    </GridLayout>
+</LinearLayout>
