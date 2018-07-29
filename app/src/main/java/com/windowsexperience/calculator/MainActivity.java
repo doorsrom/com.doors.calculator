@@ -3,6 +3,7 @@ package com.windowsexperience.calculator;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.support.design.widget.NavigationView;
@@ -160,7 +161,8 @@ public class MainActivity extends AppCompatActivity
         if (calcWrapper == R.id.wrap_converter) {
             Spinner topSpinner = (Spinner) findViewById(R.id.converter_top_dropdown);
             Spinner lowSpinner = (Spinner) findViewById(R.id.converter_low_dropdown);
-            ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, calcList, android.R.layout.simple_spinner_item);
+            //ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.spinner,list);
+            ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, calcList, R.layout.spinner);
             adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
             topSpinner.setAdapter(adapter);
             lowSpinner.setAdapter(adapter);
@@ -171,6 +173,7 @@ public class MainActivity extends AppCompatActivity
 
     public void newInput(final View v) {
         //standard standardClass = new standard();
+        converter converterClass = new converter();
         TextView calcMainText = (TextView) findViewById(R.id.calcMainText);
         String currentCategory = (String) calcMainText.getText();
         switch (currentCategory) {
@@ -185,41 +188,8 @@ public class MainActivity extends AppCompatActivity
             case "PROGRAMMER":
                 //standard.input(v);
                 break;
-            case "VOLUME":
-                //standard.input(v);
-                break;
-            case "LENGTH":
-                //standard.input(v);
-                break;
-            case "WEIGHT AND MASS":
-                //standard.input(v);
-                break;
-            case "TEMPERATURE":
-                //standard.input(v);
-                break;
-            case "ENERGY":
-                //standard.input(v);
-                break;
-            case "AREA":
-                //standard.input(v);
-                break;
-            case "SPEED":
-                //standard.input(v);
-                break;
-            case "TIME":
-                //standard.input(v);
-                break;
-            case "POWER":
-                //standard.input(v);
-                break;
-            case "DATA":
-                //standard.input(v);
-                break;
-            case "PRESSURE":
-                //standard.input(v);
-                break;
-            case "ANGLE":
-                //standard.input(v);
+            default:
+                converterClass.input(v, findViewById(R.id.converter_top_dropdown), findViewById(R.id.converter_low_dropdown));
                 break;
         }
     }
