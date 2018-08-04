@@ -1,8 +1,10 @@
 package com.windowsexperience.calculator;
 
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.support.design.widget.NavigationView;
@@ -14,6 +16,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
+import android.widget.Spinner;
+import android.widget.ArrayAdapter;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -74,19 +78,9 @@ public class MainActivity extends AppCompatActivity
         findViewById(R.id.wrap_standard).setVisibility(View.GONE);
         findViewById(R.id.wrap_scientific).setVisibility(View.GONE);
         findViewById(R.id.wrap_programmer).setVisibility(View.GONE);
-        findViewById(R.id.wrap_volume).setVisibility(View.GONE);
-        findViewById(R.id.wrap_length).setVisibility(View.GONE);
-        findViewById(R.id.wrap_weight).setVisibility(View.GONE);
-        findViewById(R.id.wrap_temperature).setVisibility(View.GONE);
-        findViewById(R.id.wrap_energy).setVisibility(View.GONE);
-        findViewById(R.id.wrap_area).setVisibility(View.GONE);
-        findViewById(R.id.wrap_speed).setVisibility(View.GONE);
-        findViewById(R.id.wrap_time).setVisibility(View.GONE);
-        findViewById(R.id.wrap_power).setVisibility(View.GONE);
-        findViewById(R.id.wrap_data).setVisibility(View.GONE);
-        findViewById(R.id.wrap_pressure).setVisibility(View.GONE);
-        findViewById(R.id.wrap_angle).setVisibility(View.GONE);
+        findViewById(R.id.wrap_converter).setVisibility(View.GONE);
         String calcType = "";
+        int calcList = 0;
         int calcWrapper = 0;
         switch (id) {
             case R.id.nav_standard:
@@ -103,62 +97,90 @@ public class MainActivity extends AppCompatActivity
                 break;
             case R.id.nav_volume:
                 calcType = "VOLUME";
-                calcWrapper = R.id.wrap_volume;
+                calcList = R.array.converter_volume;
+                calcWrapper = R.id.wrap_converter;
                 break;
             case R.id.nav_length:
                 calcType = "LENGTH";
-                calcWrapper = R.id.wrap_length;
+                calcList = R.array.converter_length;
+                calcWrapper = R.id.wrap_converter;
                 break;
             case R.id.nav_weight:
                 calcType = "WEIGHT AND MASS";
-                calcWrapper = R.id.wrap_weight;
+                calcList = R.array.converter_weight;
+                calcWrapper = R.id.wrap_converter;
                 break;
             case R.id.nav_temperature:
                 calcType = "TEMPERATURE";
-                calcWrapper = R.id.wrap_temperature;
+                calcList = R.array.converter_temperature;
+                calcWrapper = R.id.wrap_converter;
                 break;
             case R.id.nav_energy:
                 calcType = "ENERGY";
-                calcWrapper = R.id.wrap_energy;
+                calcList = R.array.converter_energy;
+                calcWrapper = R.id.wrap_converter;
                 break;
             case R.id.nav_area:
                 calcType = "AREA";
-                calcWrapper = R.id.wrap_area;
+                calcList = R.array.converter_area;
+                calcWrapper = R.id.wrap_converter;
                 break;
             case R.id.nav_speed:
                 calcType = "SPEED";
-                calcWrapper = R.id.wrap_speed;
+                calcList = R.array.converter_speed;
+                calcWrapper = R.id.wrap_converter;
                 break;
             case R.id.nav_time:
                 calcType = "TIME";
-                calcWrapper = R.id.wrap_time;
+                calcList = R.array.converter_time;
+                calcWrapper = R.id.wrap_converter;
                 break;
             case R.id.nav_power:
                 calcType = "POWER";
-                calcWrapper = R.id.wrap_power;
+                calcList = R.array.converter_power;
+                calcWrapper = R.id.wrap_converter;
                 break;
             case R.id.nav_data:
                 calcType = "DATA";
-                calcWrapper = R.id.wrap_data;
+                calcList = R.array.converter_data;
+                calcWrapper = R.id.wrap_converter;
                 break;
             case R.id.nav_pressure:
                 calcType = "PRESSURE";
-                calcWrapper = R.id.wrap_pressure;
+                calcList = R.array.converter_pressure;
+                calcWrapper = R.id.wrap_converter;
                 break;
             case R.id.nav_angle:
                 calcType = "ANGLE";
-                calcWrapper = R.id.wrap_angle;
+                calcList = R.array.converter_angle;
+                calcWrapper = R.id.wrap_converter;
                 break;
         }
         findViewById(calcWrapper).setVisibility(View.VISIBLE);
         TextView textView = (TextView) findViewById(R.id.calcMainText);
         textView.setText(calcType);
+        if (calcWrapper == R.id.wrap_converter) {
+            Spinner topSpinner = (Spinner) findViewById(R.id.converter_top_dropdown);
+            Spinner lowSpinner = (Spinner) findViewById(R.id.converter_low_dropdown);
+            String[] convertedCalcList = getResources().getStringArray(calcList);
+            ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.spinner, R.id.SpinnerID, convertedCalcList);
+            adapter.setDropDownViewResource(R.layout.spinner_dropdown);
+            topSpinner.setAdapter(adapter);
+            lowSpinner.setAdapter(adapter);
+            TextView topText = findViewById(R.id.converter_text_top);
+            TextView lowText = findViewById(R.id.converter_text_low);
+            topText.setTypeface(Typeface.DEFAULT_BOLD);
+            lowText.setTypeface(Typeface.DEFAULT);
+            topText.setText(String.valueOf(0));
+            lowText.setText(String.valueOf(0));
+        }
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(Gravity.START);
     }
 
     public void newInput(final View v) {
         //standard standardClass = new standard();
+        converter converterClass = new converter();
         TextView calcMainText = (TextView) findViewById(R.id.calcMainText);
         String currentCategory = (String) calcMainText.getText();
         switch (currentCategory) {
@@ -173,42 +195,14 @@ public class MainActivity extends AppCompatActivity
             case "PROGRAMMER":
                 //standard.input(v);
                 break;
-            case "VOLUME":
-                //standard.input(v);
-                break;
-            case "LENGTH":
-                //standard.input(v);
-                break;
-            case "WEIGHT AND MASS":
-                //standard.input(v);
-                break;
-            case "TEMPERATURE":
-                //standard.input(v);
-                break;
-            case "ENERGY":
-                //standard.input(v);
-                break;
-            case "AREA":
-                //standard.input(v);
-                break;
-            case "SPEED":
-                //standard.input(v);
-                break;
-            case "TIME":
-                //standard.input(v);
-                break;
-            case "POWER":
-                //standard.input(v);
-                break;
-            case "DATA":
-                //standard.input(v);
-                break;
-            case "PRESSURE":
-                //standard.input(v);
-                break;
-            case "ANGLE":
-                //standard.input(v);
+            default:
+                TextView topText = (TextView) findViewById(R.id.converter_text_top);
+                TextView lowText = (TextView) findViewById(R.id.converter_text_low);
+                Spinner topDrop = (Spinner) findViewById(R.id.converter_top_dropdown);
+                Spinner lowDrop = (Spinner) findViewById(R.id.converter_low_dropdown);
+                converterClass.input(v, topDrop, lowDrop, topText, lowText);
                 break;
         }
     }
 }
+
