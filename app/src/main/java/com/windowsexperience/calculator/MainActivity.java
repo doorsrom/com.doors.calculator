@@ -1,5 +1,6 @@
 package com.windowsexperience.calculator;
 
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -166,6 +167,12 @@ public class MainActivity extends AppCompatActivity
             adapter.setDropDownViewResource(R.layout.spinner_dropdown);
             topSpinner.setAdapter(adapter);
             lowSpinner.setAdapter(adapter);
+            TextView topText = findViewById(R.id.converter_text_top);
+            TextView lowText = findViewById(R.id.converter_text_low);
+            topText.setTypeface(Typeface.DEFAULT_BOLD);
+            lowText.setTypeface(Typeface.DEFAULT);
+            topText.setText(String.valueOf(0));
+            lowText.setText(String.valueOf(0));
         }
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(Gravity.START);
@@ -189,7 +196,11 @@ public class MainActivity extends AppCompatActivity
                 //standard.input(v);
                 break;
             default:
-                converterClass.input(v, findViewById(R.id.converter_top_dropdown), findViewById(R.id.converter_low_dropdown));
+                TextView topText = (TextView) findViewById(R.id.converter_text_top);
+                TextView lowText = (TextView) findViewById(R.id.converter_text_low);
+                Spinner topDrop = (Spinner) findViewById(R.id.converter_top_dropdown);
+                Spinner lowDrop = (Spinner) findViewById(R.id.converter_low_dropdown);
+                converterClass.input(v, topDrop, lowDrop, topText, lowText);
                 break;
         }
     }

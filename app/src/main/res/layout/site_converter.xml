@@ -10,6 +10,8 @@
     android:weightSum="95">
 
     <LinearLayout
+        android:id="@+id/converter_textWrapper_top"
+        android:onClick="newInput"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="10"
@@ -17,11 +19,11 @@
         android:orientation="vertical">
 
         <TextView
+            android:id="@+id/converter_text_top"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:text="0"
             android:fontFamily="sans-serif-light"
-            android:textFontWeight="bold"
             android:textSize="40dp" />
     </LinearLayout>
 
@@ -38,6 +40,8 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/converter_textWrapper_low"
+        android:onClick="newInput"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="10"
@@ -45,8 +49,10 @@
         android:orientation="vertical">
 
         <TextView
+            android:id="@+id/converter_text_low"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:fontFamily="sans-serif-light"
             android:text="0"
             android:textSize="40dp" />
     </LinearLayout>
@@ -87,20 +93,11 @@
 
         <LinearLayout
             android:layout_columnWeight="1"
-            android:layout_rowWeight="1"
-            android:orientation="vertical"
-            android:theme="@style/AppTheme.standard_Buttons">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:text="" />
-        </LinearLayout>
+            android:layout_rowWeight="1" />
 
         <LinearLayout
             android:id="@+id/converter_btn_CE"
+            android:onClick="newInput"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
             android:orientation="vertical"
@@ -117,6 +114,7 @@
 
         <LinearLayout
             android:id="@+id/converter_btn_DEL"
+            android:onClick="newInput"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
             android:orientation="vertical"
@@ -132,6 +130,7 @@
 
         <LinearLayout
             android:id="@+id/converter_btn_7"
+            android:onClick="newInput"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
             android:orientation="vertical"
@@ -147,6 +146,7 @@
 
         <LinearLayout
             android:id="@+id/converter_btn_8"
+            android:onClick="newInput"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
             android:orientation="vertical"
@@ -162,6 +162,7 @@
 
         <LinearLayout
             android:id="@+id/converter_btn_9"
+            android:onClick="newInput"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
             android:orientation="vertical"
@@ -177,6 +178,7 @@
 
         <LinearLayout
             android:id="@+id/converter_btn_4"
+            android:onClick="newInput"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
             android:orientation="vertical"
@@ -192,6 +194,7 @@
 
         <LinearLayout
             android:id="@+id/converter_btn_5"
+            android:onClick="newInput"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
             android:orientation="vertical"
@@ -207,6 +210,7 @@
 
         <LinearLayout
             android:id="@+id/converter_btn_6"
+            android:onClick="newInput"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
             android:orientation="vertical"
@@ -222,6 +226,7 @@
 
         <LinearLayout
             android:id="@+id/converter_btn_1"
+            android:onClick="newInput"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
             android:orientation="vertical"
@@ -237,6 +242,7 @@
 
         <LinearLayout
             android:id="@+id/converter_btn_2"
+            android:onClick="newInput"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
             android:orientation="vertical"
@@ -252,6 +258,7 @@
 
         <LinearLayout
             android:id="@+id/converter_btn_3"
+            android:onClick="newInput"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
             android:orientation="vertical"
@@ -267,6 +274,7 @@
 
         <LinearLayout
             android:layout_columnWeight="1"
+            android:onClick="newInput"
             android:layout_rowWeight="1"
             android:orientation="vertical"
             android:theme="@style/AppTheme.standard_Buttons">
@@ -281,6 +289,7 @@
 
         <LinearLayout
             android:id="@+id/converter_btn_0"
+            android:onClick="newInput"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
             android:orientation="vertical"
@@ -296,6 +305,7 @@
 
         <LinearLayout
             android:id="@+id/converter_btn_point"
+            android:onClick="newInput"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
             android:orientation="vertical"
