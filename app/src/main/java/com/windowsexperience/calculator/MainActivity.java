@@ -161,9 +161,9 @@ public class MainActivity extends AppCompatActivity
         if (calcWrapper == R.id.wrap_converter) {
             Spinner topSpinner = (Spinner) findViewById(R.id.converter_top_dropdown);
             Spinner lowSpinner = (Spinner) findViewById(R.id.converter_low_dropdown);
-            //ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.spinner,list);
-            ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, calcList, R.layout.spinner);
-            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+            String[] convertedCalcList = getResources().getStringArray(calcList);
+            ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.spinner, R.id.SpinnerID, convertedCalcList);
+            adapter.setDropDownViewResource(R.layout.spinner_dropdown);
             topSpinner.setAdapter(adapter);
             lowSpinner.setAdapter(adapter);
         }

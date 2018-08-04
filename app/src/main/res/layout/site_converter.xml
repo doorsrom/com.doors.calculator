@@ -32,20 +32,6 @@
             android:id="@+id/converter_top_dropdown"
             android:layout_width="wrap_content"
             android:layout_height="match_parent" />
-
-        <LinearLayout
-            android:id="@+id/converter_top_dropdown_icon"
-            android:layout_width="30dp"
-            android:layout_height="match_parent"
-            android:clickable="true"
-            android:focusable="true"
-            android:onClick="newInput">
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:src="@drawable/spinner_icon" />
-        </LinearLayout>
     </LinearLayout>
 
     <LinearLayout
@@ -71,20 +57,6 @@
             android:id="@+id/converter_low_dropdown"
             android:layout_width="wrap_content"
             android:layout_height="match_parent" />
-
-        <LinearLayout
-            android:id="@+id/converter_low_dropdown_icon"
-            android:layout_width="30dp"
-            android:layout_height="match_parent"
-            android:clickable="true"
-            android:focusable="true"
-            android:onClick="newInput">
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:src="@drawable/spinner_icon" />
-        </LinearLayout>
     </LinearLayout>
 
     <LinearLayout
