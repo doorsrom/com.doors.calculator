@@ -3,5 +3,7 @@
     <color name="colorPrimary">#FFFFFF</color>
     <color name="colorPrimaryDark">#000000</color>
     <color name="colorAccent">#ffffff</color>
-    <color name="splashBackground">#000000</color>
+
+
+    <color name="DoorsTheme.black">#000</color>
 </resources>
